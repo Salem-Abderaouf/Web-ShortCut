@@ -2,8 +2,8 @@ import os
 from Tkinter import *
 root = Tk()
 root.title('SHORTCUT')
-root.iconbitmap(default='img/add.ico')
-Pic = PhotoImage(file="img/add.gif")
+root.iconbitmap(default='add.ico')
+Pic = PhotoImage(file="add.gif")
 root.geometry('200x60+0+200')
 root.configure(background='#000000')
 #Define The widgets  
@@ -14,7 +14,7 @@ name = Entry(root,width=60,textvariable=val)
 def set_file():
     get_name = val.get()
     os.mkdir('./%s' % (get_name))
-    txt = open('img/msg.txt','r')
+    txt = open('msg.txt','r')
     data = txt.read()
     myFile = open(get_name + "/index.html", "w")
     myFile.write(data)
